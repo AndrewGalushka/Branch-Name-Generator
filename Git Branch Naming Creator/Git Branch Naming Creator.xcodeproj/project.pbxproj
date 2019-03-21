@@ -20,7 +20,6 @@
 		8DCDB1D82243E151009F5F06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DCDB1DB2243E151009F5F06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DCDB1DD2243E151009F5F06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8DCDB1DE2243E151009F5F06 /* Git_Branch_Naming_Creator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Git_Branch_Naming_Creator.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +62,6 @@
 		8DCDB1E42243E1D4009F5F06 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8DCDB1DE2243E151009F5F06 /* Git_Branch_Naming_Creator.entitlements */,
 				8DCDB1D82243E151009F5F06 /* Assets.xcassets */,
 				8DCDB1DA2243E151009F5F06 /* Main.storyboard */,
 				8DCDB1DD2243E151009F5F06 /* Info.plist */,
