@@ -11,6 +11,8 @@
 		8DCDB1D72243E14F009F5F06 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDB1D62243E14F009F5F06 /* MainViewController.swift */; };
 		8DCDB1D92243E151009F5F06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DCDB1D82243E151009F5F06 /* Assets.xcassets */; };
 		8DCDB1DC2243E151009F5F06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DCDB1DA2243E151009F5F06 /* Main.storyboard */; };
+		8DCDB1E92243ECB3009F5F06 /* BranchNameConvertorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDB1E82243ECB3009F5F06 /* BranchNameConvertorType.swift */; };
+		8DCDB1EB2243ED30009F5F06 /* BranchNameConvertor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDB1EA2243ED30009F5F06 /* BranchNameConvertor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		8DCDB1D82243E151009F5F06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DCDB1DB2243E151009F5F06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DCDB1DD2243E151009F5F06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DCDB1E82243ECB3009F5F06 /* BranchNameConvertorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchNameConvertorType.swift; sourceTree = "<group>"; };
+		8DCDB1EA2243ED30009F5F06 /* BranchNameConvertor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchNameConvertor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 		8DCDB1D32243E14F009F5F06 /* Git Branch Naming Creator */ = {
 			isa = PBXGroup;
 			children = (
+				8DCDB1E72243EC4C009F5F06 /* Convertor */,
 				8DCDB1E52243E1FE009F5F06 /* Main */,
 				8DCDB1E62243E206009F5F06 /* ViewControllers */,
 				8DCDB1E42243E1D4009F5F06 /* Resources */,
@@ -83,6 +88,15 @@
 				8DCDB1D62243E14F009F5F06 /* MainViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8DCDB1E72243EC4C009F5F06 /* Convertor */ = {
+			isa = PBXGroup;
+			children = (
+				8DCDB1E82243ECB3009F5F06 /* BranchNameConvertorType.swift */,
+				8DCDB1EA2243ED30009F5F06 /* BranchNameConvertor.swift */,
+			);
+			path = Convertor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +170,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DCDB1D72243E14F009F5F06 /* MainViewController.swift in Sources */,
+				8DCDB1EB2243ED30009F5F06 /* BranchNameConvertor.swift in Sources */,
+				8DCDB1E92243ECB3009F5F06 /* BranchNameConvertorType.swift in Sources */,
 				8DCDB1D52243E14F009F5F06 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
