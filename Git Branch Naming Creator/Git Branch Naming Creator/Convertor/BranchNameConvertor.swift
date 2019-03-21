@@ -33,11 +33,8 @@ class BranchNameConvertor: BranchNameConvertorType {
             resultString.insert("_", at: endIndex)
         }
         
-        let removeMultyUnderlineRegex = try NSRegularExpression(pattern: "_+")
-        
-        let stringWithoutMultyUnderline = NSMutableString(string: resultString)
-        removeMultyUnderlineRegex.replaceMatches(in: stringWithoutMultyUnderline, options: NSRegularExpression.MatchingOptions.reportCompletion, range: NSRange.init(location: 0, length: resultString.count), withTemplate: "_")
-        resultString = String(stringWithoutMultyUnderline)
+        // Remove multy underline
+        resultString = try self.removeMultyUnderline(in: resultString)
         
         let unallowedSymobolsRegex = try NSRegularExpression(pattern: "[^a-zA-Z_\\d]")
         
@@ -55,5 +52,15 @@ class BranchNameConvertor: BranchNameConvertorType {
         regex.replaceMatches(in: stringWithUnderline, options: NSRegularExpression.MatchingOptions.reportCompletion, range: NSRange.init(location: 0, length: stringWithUnderline.length), withTemplate: "_")
         
         return String(stringWithUnderline)
+    }
+    
+    private func removeMultyUnderline(in text: String) throws -> String {
+        let regex = try NSRegularExpression(pattern: "_{2,}")
+        let result = regex.stringByReplacingMatches(in: text,
+                                                    options: [],
+                                                    range: NSRange.init(location: 0, length: text.count) ,
+                                                    withTemplate: "_")
+        
+        return result
     }
 }
