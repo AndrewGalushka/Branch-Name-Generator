@@ -10,25 +10,21 @@ import Foundation
 
 class BranchNameConvertor: BranchNameConvertorType {
     
-    func covert(text: String) -> String {
+    func covert(text: String) throws -> String {
         var resultString = ""
         
         let trimmedString = text.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
         resultString = trimmedString
         
         
-        guard let regex = try? NSRegularExpression(pattern: "\\s+|-") else {
-            return resultString.lowercased()
-        }
+        let regex = try NSRegularExpression(pattern: "\\s+|-")
         
         let stringWithUnderline = NSMutableString(string: resultString)
         
         regex.replaceMatches(in: stringWithUnderline, options: NSRegularExpression.MatchingOptions.reportCompletion, range: NSRange.init(location: 0, length: stringWithUnderline.length), withTemplate: "_")
         resultString = String(stringWithUnderline)
         
-        guard let insertUnderlineBetweenNumbersRegex = try? NSRegularExpression(pattern: "\\d+") else {
-            return resultString.lowercased()
-        }
+        let insertUnderlineBetweenNumbersRegex = try NSRegularExpression(pattern: "\\d+")
         
         let results = insertUnderlineBetweenNumbersRegex.matches(in: resultString, options: .reportCompletion, range: NSRange.init(location: 0, length: stringWithUnderline.length))
         
@@ -41,17 +37,13 @@ class BranchNameConvertor: BranchNameConvertorType {
             resultString.insert("_", at: endIndex)
         }
         
-        guard let removeMultyUnderlineRegex = try? NSRegularExpression(pattern: "_+") else {
-            return resultString.lowercased()
-        }
+        let removeMultyUnderlineRegex = try NSRegularExpression(pattern: "_+")
         
         let stringWithoutMultyUnderline = NSMutableString(string: resultString)
         removeMultyUnderlineRegex.replaceMatches(in: stringWithoutMultyUnderline, options: NSRegularExpression.MatchingOptions.reportCompletion, range: NSRange.init(location: 0, length: stringWithUnderline.length), withTemplate: "_")
         resultString = String(stringWithoutMultyUnderline)
         
-        guard let unallowedSymobolsRegex =  try? NSRegularExpression(pattern: "[^a-zA-Z_\\d]") else {
-            return resultString.lowercased()
-        }
+        let unallowedSymobolsRegex =  try NSRegularExpression(pattern: "[^a-zA-Z_\\d]")
         
         let stringWithoutUnallowdSumbols = NSMutableString(string: resultString)
         unallowedSymobolsRegex.replaceMatches(in: stringWithoutUnallowdSumbols, options: NSRegularExpression.MatchingOptions.reportCompletion, range: NSRange.init(location: 0, length: stringWithoutUnallowdSumbols.length), withTemplate: "")

@@ -9,5 +9,5 @@
 import Foundation
 
 protocol BranchNameConvertorType: AnyObject {
-    func covert(text: String) -> String
+    func covert(text: String) throws -> String
 }

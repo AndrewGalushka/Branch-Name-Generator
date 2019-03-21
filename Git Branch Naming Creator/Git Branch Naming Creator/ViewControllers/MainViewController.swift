@@ -31,7 +31,13 @@ class MainViewController: NSViewController {
     @IBAction func entringTextFieldEnterActionHandler(_ sender: Any) {
         
         if !entringTextField.stringValue.isEmpty {
-            resultTextField.stringValue = self.branchNameConvertor.covert(text: entringTextField.stringValue)
+            
+            do {
+                resultTextField.stringValue = try self.branchNameConvertor.covert(text: entringTextField.stringValue)
+            } catch (let error) {
+                resultTextField.stringValue = error.localizedDescription
+            }
+            
             textCopied()
         }
     }
