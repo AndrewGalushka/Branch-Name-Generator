@@ -18,23 +18,19 @@ class BranchNameConvertor: BranchNameConvertorType {
         resultString = trimmedString
 
         // Replace multy spaces and dash with "_"
+        print("Before replaceMultySpacesAndDashWithUnderline --- \(resultString)")
         resultString = try self.replaceMultySpacesAndDashWithUnderline(in: resultString)
+        print("After replaceMultySpacesAndDashWithUnderline --- \(resultString)")
         
-        let insertUnderlineBetweenNumbersRegex = try NSRegularExpression(pattern: "\\d+")
-        
-        let results = insertUnderlineBetweenNumbersRegex.matches(in: resultString, options: .reportCompletion, range: NSRange.init(location: 0, length: resultString.count))
-        
-        for result in results {
-            
-            let startIndex = resultString.index(resultString.startIndex, offsetBy: result.range.location)
-            resultString.insert("_", at: startIndex)
-            
-            let endIndex = resultString.index(resultString.startIndex, offsetBy: result.range.location + result.range.length + 1)
-            resultString.insert("_", at: endIndex)
-        }
+        // Insert underline between digit and letter
+        print("Before insertUnderlineBetweenDigitAndLetter --- \(resultString)")
+        resultString = try self.insertUnderlineBetweenDigitAndLetter(in: resultString)
+        print("After insertUnderlineBetweenDigitAndLetter --- \(resultString)")
         
         // Remove multy underline
+        print("Before removeMultyUnderline --- \(resultString)")
         resultString = try self.removeMultyUnderline(in: resultString)
+        print("After removeMultyUnderline --- \(resultString)")
         
         let unallowedSymobolsRegex = try NSRegularExpression(pattern: "[^a-zA-Z_\\d]")
         
@@ -62,5 +58,22 @@ class BranchNameConvertor: BranchNameConvertorType {
                                                     withTemplate: "_")
         
         return result
+    }
+    
+    private func insertUnderlineBetweenDigitAndLetter(in text: String) throws -> String {
+        var text = text
+        let regex = try NSRegularExpression(pattern: "\\d+")
+        let matches = regex.matches(in: text, options: .reportCompletion, range: NSRange.init(location: 0, length: text.count))
+        
+        for match in matches {
+            
+            let startIndex = text.index(text.startIndex, offsetBy: match.range.location)
+            text.insert("_", at: startIndex)
+            
+            let endIndex = text.index(text.startIndex, offsetBy: match.range.location + match.range.length + 1)
+            text.insert("_", at: endIndex)
+        }
+        
+        return text
     }
 }
