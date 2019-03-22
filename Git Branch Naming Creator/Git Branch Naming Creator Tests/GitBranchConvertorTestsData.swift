@@ -19,10 +19,10 @@ struct GitBranchConvertorTestsData {
     static let testData3 = TestData(input: "NIS-4359 Do not show-Error Alert      second Time  Bug Fix",
                                     correctResult: "nis_4359_do_not_show_error_alert_second_time_bug_fix")
     
-    static let testData4 = TestData(input: "NIS4359do----Not show error_ALLERT 2times in a row",
-                                    correctResult: "nis_4359_do_not_show_error_alert_2_times_in_a_row")
+    static let testData4 = TestData(input: "1NIS4359do----Not show error_ALERT 2times in a row3 ",
+                                    correctResult: "1_nis_4359_do_not_show_error_alert_2_times_in_a_row_3")
     
-    static let testData5 = TestData(input: " #%^&&# NIS4359^##$*&^do----%!@#^N!@#%^ot sh!@#^!@#ow #!%______--@^ error!@%__%^#ALLERT 2times in a row^^#$$^^&/n",
+    static let testData5 = TestData(input: " #%^&&# NIS4359^##$*&^do----%!@#^N!@#%^ot sh!@#^!@#ow #!%______--@^ error!@%__%^#ALERT 2times in a row^^#$$^^&\n",
                                     correctResult: "nis_4359_do_not_show_error_alert_2_times_in_a_row")
 }
 
