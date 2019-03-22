@@ -11,7 +11,7 @@ import XCTest
 
 class GitBranchNamingCreatorTests: XCTestCase {
 
-    var nameConverotor: BranchNameConvertor!
+    var nameConverotor: BranchNameConvertorType!
     
     override func setUp() {
         self.nameConverotor = BranchNameConvertor()
