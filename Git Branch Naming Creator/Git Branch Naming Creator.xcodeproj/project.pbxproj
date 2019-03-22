@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D1A50552244DBBD00C36C66 /* Git_Branch_Naming_Creator_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1A50542244DBBD00C36C66 /* Git_Branch_Naming_Creator_Tests.swift */; };
 		8DCDB1D52243E14F009F5F06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDB1D42243E14F009F5F06 /* AppDelegate.swift */; };
 		8DCDB1D72243E14F009F5F06 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDB1D62243E14F009F5F06 /* MainViewController.swift */; };
 		8DCDB1D92243E151009F5F06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DCDB1D82243E151009F5F06 /* Assets.xcassets */; };
@@ -15,7 +16,20 @@
 		8DCDB1EB2243ED30009F5F06 /* BranchNameConvertor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDB1EA2243ED30009F5F06 /* BranchNameConvertor.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8D1A50572244DBBD00C36C66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DCDB1C92243E14F009F5F06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DCDB1D02243E14F009F5F06;
+			remoteInfo = "Git Branch Naming Creator";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		8D1A50522244DBBC00C36C66 /* Git Branch Naming Creator Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Git Branch Naming Creator Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1A50542244DBBD00C36C66 /* Git_Branch_Naming_Creator_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Git_Branch_Naming_Creator_Tests.swift; sourceTree = "<group>"; };
+		8D1A50562244DBBD00C36C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DCDB1D12243E14F009F5F06 /* Git Branch Naming Creator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Git Branch Naming Creator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DCDB1D42243E14F009F5F06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DCDB1D62243E14F009F5F06 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -27,6 +41,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8D1A504F2244DBBC00C36C66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DCDB1CE2243E14F009F5F06 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +58,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D1A50532244DBBD00C36C66 /* Git Branch Naming Creator Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8D1A50542244DBBD00C36C66 /* Git_Branch_Naming_Creator_Tests.swift */,
+				8D1A50562244DBBD00C36C66 /* Info.plist */,
+			);
+			path = "Git Branch Naming Creator Tests";
+			sourceTree = "<group>";
+		};
 		8DCDB1C82243E14F009F5F06 = {
 			isa = PBXGroup;
 			children = (
 				8DCDB1D32243E14F009F5F06 /* Git Branch Naming Creator */,
+				8D1A50532244DBBD00C36C66 /* Git Branch Naming Creator Tests */,
 				8DCDB1D22243E14F009F5F06 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				8DCDB1D12243E14F009F5F06 /* Git Branch Naming Creator.app */,
+				8D1A50522244DBBC00C36C66 /* Git Branch Naming Creator Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,6 +134,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8D1A50512244DBBC00C36C66 /* Git Branch Naming Creator Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D1A50592244DBBD00C36C66 /* Build configuration list for PBXNativeTarget "Git Branch Naming Creator Tests" */;
+			buildPhases = (
+				8D1A504E2244DBBC00C36C66 /* Sources */,
+				8D1A504F2244DBBC00C36C66 /* Frameworks */,
+				8D1A50502244DBBC00C36C66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D1A50582244DBBD00C36C66 /* PBXTargetDependency */,
+			);
+			name = "Git Branch Naming Creator Tests";
+			productName = "Git Branch Naming Creator Tests";
+			productReference = 8D1A50522244DBBC00C36C66 /* Git Branch Naming Creator Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8DCDB1D02243E14F009F5F06 /* Git Branch Naming Creator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DCDB1E12243E151009F5F06 /* Build configuration list for PBXNativeTarget "Git Branch Naming Creator" */;
@@ -129,6 +179,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Galushka;
 				TargetAttributes = {
+					8D1A50512244DBBC00C36C66 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 8DCDB1D02243E14F009F5F06;
+					};
 					8DCDB1D02243E14F009F5F06 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -148,11 +202,19 @@
 			projectRoot = "";
 			targets = (
 				8DCDB1D02243E14F009F5F06 /* Git Branch Naming Creator */,
+				8D1A50512244DBBC00C36C66 /* Git Branch Naming Creator Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8D1A50502244DBBC00C36C66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DCDB1CF2243E14F009F5F06 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -165,6 +227,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8D1A504E2244DBBC00C36C66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1A50552244DBBD00C36C66 /* Git_Branch_Naming_Creator_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DCDB1CD2243E14F009F5F06 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -178,6 +248,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8D1A50582244DBBD00C36C66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DCDB1D02243E14F009F5F06 /* Git Branch Naming Creator */;
+			targetProxy = 8D1A50572244DBBD00C36C66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		8DCDB1DA2243E151009F5F06 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -190,6 +268,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8D1A505A2244DBBD00C36C66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Git Branch Naming Creator Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Halushka.Git-Branch-Naming-Creator-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Git Branch Naming Creator.app/Contents/MacOS/Git Branch Naming Creator";
+			};
+			name = Debug;
+		};
+		8D1A505B2244DBBD00C36C66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Git Branch Naming Creator Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Halushka.Git-Branch-Naming-Creator-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Git Branch Naming Creator.app/Contents/MacOS/Git Branch Naming Creator";
+			};
+			name = Release;
+		};
 		8DCDB1DF2243E151009F5F06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -350,6 +472,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8D1A50592244DBBD00C36C66 /* Build configuration list for PBXNativeTarget "Git Branch Naming Creator Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D1A505A2244DBBD00C36C66 /* Debug */,
+				8D1A505B2244DBBD00C36C66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8DCDB1CC2243E14F009F5F06 /* Build configuration list for PBXProject "Git Branch Naming Creator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
