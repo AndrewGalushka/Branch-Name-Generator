@@ -41,6 +41,10 @@ class GitBranchNamingCreatorTests: XCTestCase {
         self.testIsConversionCorrect(dataToTest: GitBranchConvertorTestsData.testData5)
     }
     
+    func testISConversionCorrect6() {
+        self.testIsConversionCorrect(dataToTest: GitBranchConvertorTestsData.testData6)
+    }
+    
     func testIsConversionCorrect(dataToTest: GitBranchConvertorTestsData.TestData) {
         do {
             let result = try self.nameConverotor.covert(text: dataToTest.input)
@@ -54,7 +58,7 @@ class GitBranchNamingCreatorTests: XCTestCase {
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
-            _ = try? self.nameConverotor.covert(text: GitBranchConvertorTestsData.testData5.input)
+            _ = try? self.nameConverotor.covert(text: GitBranchConvertorTestsData.testData6.input)
             // Put the code you want to measure the time of here.
         }
     }

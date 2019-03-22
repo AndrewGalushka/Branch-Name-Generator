@@ -52,27 +52,16 @@ class BranchNameConvertor: BranchNameConvertorType {
     
     private func insertUnderlineBetweenDigitAndLetter(in text: String) throws -> String {
         var text = text
-        let regex = try NSRegularExpression(pattern: "\\d+")
+        let regex = try NSRegularExpression(pattern: "[0-9][a-zA-Z]|[a-zA-Z][0-9]")
         let matches = regex.matches(in: text, options: [], range: NSRange.init(location: 0, length: text.count))
         
-        var offset = 0
+        var offset = 1
         
         for match in matches {
-            
             var startIndex = text.index(text.startIndex, offsetBy: match.range.location + offset)
-            
-            if text.startIndex != startIndex {
-                text.insert("_", at: startIndex)
-                startIndex = text.index(startIndex, offsetBy: 1)
-                offset += 1
-            }
-            
-            let endIndex = text.index(startIndex, offsetBy: match.range.length)
-            
-            if text.endIndex != endIndex {
-                text.insert("_", at: endIndex)
-                offset += 1
-            }
+            text.insert("_", at: startIndex)
+            startIndex = text.index(startIndex, offsetBy: 1)
+            offset += 1
         }
         
         return text

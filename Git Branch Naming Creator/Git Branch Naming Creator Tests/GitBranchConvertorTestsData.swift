@@ -24,6 +24,9 @@ struct GitBranchConvertorTestsData {
     
     static let testData5 = TestData(input: " #%^&&# NIS4359^##$*&^do----%!@#^Not show #!%______--@^ error!@%__%^#ALERT 2times in a row^^#$$^^&\n",
                                     correctResult: "nis_4359_do_not_show_error_alert_2_times_in_a_row")
+    
+    static let testData6 = TestData(input: " #%^&&#13NIS4359^##$*&^do----%!@#^Not show #!%______--@^ error!@%__%^#ALERT 2times in a row^^#$$^^&\n",
+                                    correctResult: "13_nis_4359_do_not_show_error_alert_2_times_in_a_row")
 }
 
 extension GitBranchConvertorTestsData {
