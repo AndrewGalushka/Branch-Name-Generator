@@ -18,24 +18,16 @@ class BranchNameConvertor: BranchNameConvertorType {
         resultString = trimmedString
 
         // Replace multy spaces and dash with "_"
-        print("Before replaceMultySpacesAndDashWithUnderline --- \(resultString)")
         resultString = try self.replaceMultySpacesAndDashWithUnderline(in: resultString)
-        print("After replaceMultySpacesAndDashWithUnderline --- \(resultString)")
         
         // Insert underline between digit and letter
-        print("Before insertUnderlineBetweenDigitAndLetter --- \(resultString)")
         resultString = try self.insertUnderlineBetweenDigitAndLetter(in: resultString)
-        print("After insertUnderlineBetweenDigitAndLetter --- \(resultString)")
         
         // Remove unallowed symbols
-        print("Before removeUnallowedSymbols --- \(resultString)")
         resultString = try self.removeUnallowedSymbols(in: resultString)
-        print("After removeUnallowedSymbols --- \(resultString)")
         
         // Remove multy underline
-        print("Before removeMultyUnderline --- \(resultString)")
         resultString = try self.removeMultyUnderline(in: resultString)
-        print("After removeMultyUnderline --- \(resultString)")
         
         return resultString.lowercased()
     }
