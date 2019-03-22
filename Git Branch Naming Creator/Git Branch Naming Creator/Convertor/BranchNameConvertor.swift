@@ -32,11 +32,10 @@ class BranchNameConvertor: BranchNameConvertorType {
         resultString = try self.removeMultyUnderline(in: resultString)
         print("After removeMultyUnderline --- \(resultString)")
         
-        let unallowedSymobolsRegex = try NSRegularExpression(pattern: "[^a-zA-Z_\\d]")
-        
-        let stringWithoutUnallowdSumbols = NSMutableString(string: resultString)
-        unallowedSymobolsRegex.replaceMatches(in: stringWithoutUnallowdSumbols, options: NSRegularExpression.MatchingOptions.reportCompletion, range: NSRange.init(location: 0, length: stringWithoutUnallowdSumbols.length), withTemplate: "")
-        resultString = String(stringWithoutUnallowdSumbols)
+        // Remove unallowed symbols
+        print("Before removeUnallowedSymbols --- \(resultString)")
+        resultString = try self.removeUnallowedSymbols(in: resultString)
+        print("After removeUnallowedSymbols --- \(resultString)")
         
         return resultString.lowercased()
     }
@@ -75,5 +74,15 @@ class BranchNameConvertor: BranchNameConvertorType {
         }
         
         return text
+    }
+    
+    private func removeUnallowedSymbols(in text: String) throws -> String {
+        let regex = try NSRegularExpression(pattern: "[^a-zA-Z_\\d]+")
+        let result = regex.stringByReplacingMatches(in: text,
+                                                    options: [],
+                                                    range: NSRange.init(location: 0, length: text.count),
+                                                    withTemplate: "")
+        
+        return result
     }
 }
