@@ -13,7 +13,7 @@ class BranchNameConvertor: BranchNameConvertorType {
     func covert(text: String) throws -> String {
         var result = ""
         
-        // Trim whitespeses and new lines at beginning and end of text
+        // Trim whitespeses and new lines at beginning and end of the text
         result = text.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
 
         // Replace multy spaces and dash with "_"
@@ -53,15 +53,26 @@ class BranchNameConvertor: BranchNameConvertorType {
     private func insertUnderlineBetweenDigitAndLetter(in text: String) throws -> String {
         var text = text
         let regex = try NSRegularExpression(pattern: "\\d+")
-        let matches = regex.matches(in: text, options: .reportCompletion, range: NSRange.init(location: 0, length: text.count))
+        let matches = regex.matches(in: text, options: [], range: NSRange.init(location: 0, length: text.count))
+        
+        var offset = 0
         
         for match in matches {
             
-            let startIndex = text.index(text.startIndex, offsetBy: match.range.location)
-            text.insert("_", at: startIndex)
+            var startIndex = text.index(text.startIndex, offsetBy: match.range.location + offset)
             
-            let endIndex = text.index(text.startIndex, offsetBy: match.range.location + match.range.length + 1)
-            text.insert("_", at: endIndex)
+            if text.startIndex != startIndex {
+                text.insert("_", at: startIndex)
+                startIndex = text.index(startIndex, offsetBy: 1)
+                offset += 1
+            }
+            
+            let endIndex = text.index(startIndex, offsetBy: match.range.length)
+            
+            if text.endIndex != endIndex {
+                text.insert("_", at: endIndex)
+                offset += 1
+            }
         }
         
         return text
