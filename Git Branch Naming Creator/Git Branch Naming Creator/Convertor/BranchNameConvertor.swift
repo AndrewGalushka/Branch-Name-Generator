@@ -11,25 +11,24 @@ import Foundation
 class BranchNameConvertor: BranchNameConvertorType {
     
     func covert(text: String) throws -> String {
-        var resultString = ""
+        var result = ""
         
-        // Trim whitespeses and new lines
-        let trimmedString = text.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
-        resultString = trimmedString
+        // Trim whitespeses and new lines at beginning and end of text
+        result = text.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
 
         // Replace multy spaces and dash with "_"
-        resultString = try self.replaceMultySpacesAndDashWithUnderline(in: resultString)
+        result = try self.replaceMultySpacesAndDashWithUnderline(in: result)
         
         // Insert underline between digit and letter
-        resultString = try self.insertUnderlineBetweenDigitAndLetter(in: resultString)
+        result = try self.insertUnderlineBetweenDigitAndLetter(in: result)
         
         // Remove unallowed symbols
-        resultString = try self.removeUnallowedSymbols(in: resultString)
+        result = try self.removeUnallowedSymbols(in: result)
         
         // Remove multy underline
-        resultString = try self.removeMultyUnderline(in: resultString)
+        result = try self.removeMultyUnderline(in: result)
         
-        return resultString.lowercased()
+        return result.lowercased()
     }
     
     private func replaceMultySpacesAndDashWithUnderline(in text: String) throws -> String {
