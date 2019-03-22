@@ -11,33 +11,24 @@ import Foundation
 class BranchNameConvertor: BranchNameConvertorType {
     
     func covert(text: String) throws -> String {
-        var resultString = ""
+        var result = ""
         
-        // Trim whitespeses and new lines
-        let trimmedString = text.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
-        resultString = trimmedString
+        // Trim whitespeses and new lines at beginning and end of text
+        result = text.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
 
         // Replace multy spaces and dash with "_"
-        print("Before replaceMultySpacesAndDashWithUnderline --- \(resultString)")
-        resultString = try self.replaceMultySpacesAndDashWithUnderline(in: resultString)
-        print("After replaceMultySpacesAndDashWithUnderline --- \(resultString)")
+        result = try self.replaceMultySpacesAndDashWithUnderline(in: result)
         
         // Insert underline between digit and letter
-        print("Before insertUnderlineBetweenDigitAndLetter --- \(resultString)")
-        resultString = try self.insertUnderlineBetweenDigitAndLetter(in: resultString)
-        print("After insertUnderlineBetweenDigitAndLetter --- \(resultString)")
+        result = try self.insertUnderlineBetweenDigitAndLetter(in: result)
         
         // Remove unallowed symbols
-        print("Before removeUnallowedSymbols --- \(resultString)")
-        resultString = try self.removeUnallowedSymbols(in: resultString)
-        print("After removeUnallowedSymbols --- \(resultString)")
+        result = try self.removeUnallowedSymbols(in: result)
         
         // Remove multy underline
-        print("Before removeMultyUnderline --- \(resultString)")
-        resultString = try self.removeMultyUnderline(in: resultString)
-        print("After removeMultyUnderline --- \(resultString)")
+        result = try self.removeMultyUnderline(in: result)
         
-        return resultString.lowercased()
+        return result.lowercased()
     }
     
     private func replaceMultySpacesAndDashWithUnderline(in text: String) throws -> String {
