@@ -11,19 +11,19 @@ import Foundation
 class BranchNameConvertor: BranchNameConvertorType {
     
     func covert(text: String) throws -> String {
-        var result = ""
+        var result = text
+        
+        // Remove unallowed symbols
+        result = try self.removeUnallowedSymbols(in: result)
         
         // Trim whitespeses and new lines at beginning and end of the text
-        result = text.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
+        result = result.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
 
         // Replace multy spaces and dash with "_"
         result = try self.replaceMultySpacesAndDashWithUnderline(in: result)
         
         // Insert underline between digit and letter
         result = try self.insertUnderlineBetweenDigitAndLetter(in: result)
-        
-        // Remove unallowed symbols
-        result = try self.removeUnallowedSymbols(in: result)
         
         // Remove multy underline
         result = try self.removeMultyUnderline(in: result)
@@ -83,7 +83,7 @@ class BranchNameConvertor: BranchNameConvertorType {
         let result = regex.stringByReplacingMatches(in: text,
                                                     options: [],
                                                     range: NSRange.init(location: 0, length: text.count),
-                                                    withTemplate: "")
+                                                    withTemplate: " ")
         
         return result
     }
