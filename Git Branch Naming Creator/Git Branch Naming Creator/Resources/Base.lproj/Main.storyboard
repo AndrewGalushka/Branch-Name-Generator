@@ -777,6 +777,8 @@
                         <outlet property="copiedTextField" destination="cWj-kr-Gfe" id="w9z-dP-SPq"/>
                         <outlet property="entringTextField" destination="7K5-3a-qkW" id="b4d-p5-kCy"/>
                         <outlet property="resultTextField" destination="3Bx-eJ-esd" id="rcN-Pb-1et"/>
+                        <outlet property="viewHeightConstraint" destination="Wbt-JR-qvc" id="Um2-mb-ukB"/>
+                        <outlet property="viewWidthConstraint" destination="6np-UN-Exn" id="IPE-pe-8n5"/>
                     </connections>
                 </viewController>
                 <customObject id="NsX-uO-C7F" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

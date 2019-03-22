@@ -14,17 +14,29 @@ class MainViewController: NSViewController {
     @IBOutlet weak var copiedTextField: NSTextField!
     @IBOutlet weak var resultTextField: NSTextField!
     
+    @IBOutlet weak var viewWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var viewHeightConstraint: NSLayoutConstraint!
+    
     private var branchNameConvertor: BranchNameConvertorType = BranchNameConvertor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        copiedTextField.alphaValue = 0.0
+        self.setupUI()
     }
     
     override var representedObject: Any? {
         didSet {
             // Update the view, if already loaded.
+        }
+    }
+    
+    private func setupUI() {
+        copiedTextField.alphaValue = 0.0
+        
+        if let currentScreenSize = Screen.currentScreenResolution() {
+            viewWidthConstraint.constant = round(currentScreenSize.width * 0.4)
+            viewHeightConstraint.constant = round(currentScreenSize.height * 0.4)
         }
     }
     

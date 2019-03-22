@@ -15,6 +15,7 @@
 		8DCDB1E92243ECB3009F5F06 /* BranchNameConvertorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDB1E82243ECB3009F5F06 /* BranchNameConvertorType.swift */; };
 		8DCDB1EB2243ED30009F5F06 /* BranchNameConvertor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDB1EA2243ED30009F5F06 /* BranchNameConvertor.swift */; };
 		8DFF32B02244EF4500B607CC /* GitBranchConvertorTestsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFF32AF2244EF4500B607CC /* GitBranchConvertorTestsData.swift */; };
+		8DFF32B3224528ED00B607CC /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFF32B2224528ED00B607CC /* Screen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		8DCDB1E82243ECB3009F5F06 /* BranchNameConvertorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchNameConvertorType.swift; sourceTree = "<group>"; };
 		8DCDB1EA2243ED30009F5F06 /* BranchNameConvertor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchNameConvertor.swift; sourceTree = "<group>"; };
 		8DFF32AF2244EF4500B607CC /* GitBranchConvertorTestsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitBranchConvertorTestsData.swift; sourceTree = "<group>"; };
+		8DFF32B2224528ED00B607CC /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		8DCDB1D32243E14F009F5F06 /* Git Branch Naming Creator */ = {
 			isa = PBXGroup;
 			children = (
+				8DFF32B1224528DE00B607CC /* Helpers */,
 				8DCDB1E72243EC4C009F5F06 /* Convertor */,
 				8DCDB1E52243E1FE009F5F06 /* Main */,
 				8DCDB1E62243E206009F5F06 /* ViewControllers */,
@@ -132,6 +135,14 @@
 				8DCDB1EA2243ED30009F5F06 /* BranchNameConvertor.swift */,
 			);
 			path = Convertor;
+			sourceTree = "<group>";
+		};
+		8DFF32B1224528DE00B607CC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8DFF32B2224528ED00B607CC /* Screen.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DFF32B3224528ED00B607CC /* Screen.swift in Sources */,
 				8DCDB1D72243E14F009F5F06 /* MainViewController.swift in Sources */,
 				8DCDB1EB2243ED30009F5F06 /* BranchNameConvertor.swift in Sources */,
 				8DCDB1E92243ECB3009F5F06 /* BranchNameConvertorType.swift in Sources */,
