@@ -713,8 +713,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7K5-3a-qkW">
-                                        <rect key="frame" x="10" y="428" width="480" height="22"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="4ok-df-wAo">
+                                        <rect key="frame" x="10" y="453" width="480" height="22"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" placeholderString="Type possible branch name here and then press Enter" drawsBackground="YES" id="4ok-df-wAo">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -724,7 +724,7 @@
                                         </connections>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qyH-o1-AwD">
-                                        <rect key="frame" x="8" y="371" width="484" height="17"/>
+                                        <rect key="frame" x="8" y="411" width="484" height="17"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Result:" id="o7g-n1-AlL">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="knobColor" catalog="System" colorSpace="catalog"/>
@@ -732,7 +732,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="10" verticalCompressionResistancePriority="100" translatesAutoresizingMaskIntoConstraints="NO" id="3Bx-eJ-esd">
-                                        <rect key="frame" x="8" y="50" width="484" height="311"/>
+                                        <rect key="frame" x="8" y="10" width="484" height="391"/>
                                         <textFieldCell key="cell" lineBreakMode="charWrapping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" alignment="left" id="t2U-tg-FZ2">
                                             <font key="font" metaFont="system" size="20"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -740,7 +740,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cWj-kr-Gfe">
-                                        <rect key="frame" x="219" y="369" width="62" height="22"/>
+                                        <rect key="frame" x="219" y="409" width="62" height="22"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Copied" id="aKC-t7-Jgv">
                                             <font key="font" metaFont="system" size="18"/>
                                             <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
@@ -751,7 +751,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="500" id="6np-UN-Exn"/>
                                     <constraint firstAttribute="trailing" secondItem="qyH-o1-AwD" secondAttribute="trailing" constant="10" id="CfL-Se-Ksm"/>
-                                    <constraint firstItem="cWj-kr-Gfe" firstAttribute="centerX" secondItem="7K5-3a-qkW" secondAttribute="centerX" id="IBK-MQ-MV7"/>
                                     <constraint firstItem="qyH-o1-AwD" firstAttribute="leading" secondItem="giz-AU-dAY" secondAttribute="leading" constant="10" id="JRh-Ee-XfM"/>
                                     <constraint firstItem="cWj-kr-Gfe" firstAttribute="centerY" secondItem="qyH-o1-AwD" secondAttribute="centerY" id="ML8-CG-f6d"/>
                                     <constraint firstItem="3Bx-eJ-esd" firstAttribute="top" secondItem="qyH-o1-AwD" secondAttribute="bottom" constant="10" id="NI8-O7-wS0"/>
@@ -759,10 +758,11 @@
                                     <constraint firstItem="3Bx-eJ-esd" firstAttribute="leading" secondItem="giz-AU-dAY" secondAttribute="leading" constant="10" id="Uf8-iM-gRN"/>
                                     <constraint firstAttribute="trailing" secondItem="7K5-3a-qkW" secondAttribute="trailing" constant="10" id="V6C-yy-Eoa"/>
                                     <constraint firstAttribute="height" constant="500" id="Wbt-JR-qvc"/>
+                                    <constraint firstItem="cWj-kr-Gfe" firstAttribute="centerX" secondItem="giz-AU-dAY" secondAttribute="centerX" id="WmJ-6v-glO"/>
                                     <constraint firstItem="7K5-3a-qkW" firstAttribute="leading" secondItem="giz-AU-dAY" secondAttribute="leading" constant="10" id="Xaf-D9-TfX"/>
-                                    <constraint firstItem="qyH-o1-AwD" firstAttribute="top" secondItem="7K5-3a-qkW" secondAttribute="bottom" constant="40" id="bOA-KB-7At"/>
-                                    <constraint firstAttribute="bottom" secondItem="3Bx-eJ-esd" secondAttribute="bottom" constant="50" id="yTT-IM-gfo"/>
-                                    <constraint firstItem="7K5-3a-qkW" firstAttribute="top" secondItem="giz-AU-dAY" secondAttribute="top" constant="50" id="yTz-IJ-iUl"/>
+                                    <constraint firstItem="qyH-o1-AwD" firstAttribute="top" secondItem="7K5-3a-qkW" secondAttribute="bottom" constant="25" id="bOA-KB-7At"/>
+                                    <constraint firstAttribute="bottom" secondItem="3Bx-eJ-esd" secondAttribute="bottom" constant="10" id="yTT-IM-gfo"/>
+                                    <constraint firstItem="7K5-3a-qkW" firstAttribute="top" secondItem="giz-AU-dAY" secondAttribute="top" constant="25" id="yTz-IJ-iUl"/>
                                 </constraints>
                             </customView>
                         </subviews>

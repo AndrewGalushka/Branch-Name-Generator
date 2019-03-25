@@ -33,6 +33,7 @@ class MainViewController: NSViewController {
     
     private func setupUI() {
         copiedTextField.alphaValue = 0.0
+        self.entringTextField.becomeFirstResponder()
         
         if let currentScreenSize = Screen.currentScreenResolution() {
             viewWidthConstraint.constant = round(currentScreenSize.width * 0.4)
