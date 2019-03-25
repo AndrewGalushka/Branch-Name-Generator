@@ -3,3 +3,27 @@
 This project has born during my commercial project. 
 Every day I did the same sings, copy task name in JIRA and format it (removed upper case, insert underline and remove unallowed symbols like "-" etc).
 Doing it multiple times a day every day was annoying and trivial, so I decided to create this application that make life of our team little easy.
+
+<p align="center">
+    <img src="Demo/Git Branch Naming Creato(demo1).png" width="350" max-width="50%" alt="Collection view self-sizing cells" />
+</p>
+
+<p align="center">
+    <img src="Demo/Git Branch Naming Creato(demo2).png" width="350" max-width="50%" alt="Collection view self-sizing cells" />
+</p>
+
+<p align="center">
+    <img src="Demo/Git Branch Naming Creato(demo3).png" width="350" max-width="50%" alt="Collection view self-sizing cells" />
+</p>
+
+<p align="center">
+    <img src="Demo/Git Branch Naming Creato(demo4).png" width="350" max-width="50%" alt="Collection view self-sizing cells" />
+</p>
+
+<p align="center">
+    <img src="Demo/Git Branch Naming Creato(demo5).png" width="350" max-width="50%" alt="Collection view self-sizing cells" />
+</p>
+
+<p align="center">
+    <img src="Demo/Git Branch Naming Creato(demo6).png" width="350" max-width="50%" alt="Collection view self-sizing cells" />
+</p>
