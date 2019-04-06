@@ -1,5 +1,5 @@
 # Git Branch Naming Creator
-  Is a simple Mac OS application that let you save your time, when you create allowed branch name from task name, for example JIRA task.
+Is a simple Mac OS application that let you save your time, when you create allowed branch name from task name, for example JIRA task.
 This application has born during my commercial project. 
 Every day I did the same things, copy task name from JIRA and format it а (removed upper case, insert underline and remove unallowed symbols like "-" etc).
 Doing it multiple times a day every day was annoying and trivial. 
