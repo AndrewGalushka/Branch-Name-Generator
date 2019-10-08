@@ -14,7 +14,7 @@ class GitBranchNamingCreatorTests: XCTestCase {
     func testConversionCorrect1() throws {
         let expected = "ga_2846_improve_matrix_presentation"
         
-        let converted = try makeSUT().covert(text: "GA_2846 Improve Matrix presentation  ")
+        let converted = try makeSUT().convert(text: "GA_2846 Improve Matrix presentation  ")
         
         XCTAssertEqual(converted, expected)
     }
@@ -22,7 +22,7 @@ class GitBranchNamingCreatorTests: XCTestCase {
     func testIsConversionCorrect2() throws {
         let expected = "ga_2846_improve_matrix_presentation"
         
-        let converted = try makeSUT().covert(text:  "  GA 2846 impRove Matrix PResentation")
+        let converted = try makeSUT().convert(text:  "  GA 2846 impRove Matrix PResentation")
         
         XCTAssertEqual(converted, expected)
     }
@@ -30,7 +30,7 @@ class GitBranchNamingCreatorTests: XCTestCase {
     func testConversionCorrect3() throws {
         let expected = "gis_4359_do_not_show_error_alert_second_time_bug_fix"
         
-        let converted = try makeSUT().covert(text: "GIS-4359 Do not show-Error Alert      second Time  Bug Fix")
+        let converted = try makeSUT().convert(text: "GIS-4359 Do not show-Error Alert      second Time  Bug Fix")
         
         XCTAssertEqual(converted, expected)
     }
@@ -38,7 +38,7 @@ class GitBranchNamingCreatorTests: XCTestCase {
     func testConversionCorrect4() throws {
         let expected = "1_gis_4359_do_not_show_error_alert_2_times_in_a_row_3"
         
-        let converted = try makeSUT().covert(text: "1GIS4359do----Not show error_ALERT 2times in a row3 ")
+        let converted = try makeSUT().convert(text: "1GIS4359do----Not show error_ALERT 2times in a row3 ")
         
         XCTAssertEqual(converted, expected)
     }
@@ -46,7 +46,7 @@ class GitBranchNamingCreatorTests: XCTestCase {
     func testConversionCorrect5() throws {
         let expected = "gis_4359_do_not_show_error_alert_2_times_in_a_row"
         
-        let converted = try makeSUT().covert(text: " #%^&&# GIS4359^##$*&^do----%!@#^Not show #!%______--@^ error!@%__%^#ALERT 2times in a row^^#$$^^&\n")
+        let converted = try makeSUT().convert(text: " #%^&&# GIS4359^##$*&^do----%!@#^Not show #!%______--@^ error!@%__%^#ALERT 2times in a row^^#$$^^&\n")
         
         XCTAssertEqual(converted, expected)
     }
@@ -54,14 +54,14 @@ class GitBranchNamingCreatorTests: XCTestCase {
     func testConversionCorrect6() throws {
         let expected = "13_gis_4359_do_not_show_error_alert_2_times_in_a_row"
         
-        let converted = try makeSUT().covert(text: " #%^&&#13GIS4359^##$*&^do----%!@#^Not show #!%______--@^ error!@%__%^#ALERT 2times in a row^^#$$^^&\n")
+        let converted = try makeSUT().convert(text: " #%^&&#13GIS4359^##$*&^do----%!@#^Not show #!%______--@^ error!@%__%^#ALERT 2times in a row^^#$$^^&\n")
         
         XCTAssertEqual(converted, expected)
     }
         
     func testPerformanceExample() throws {
         self.measure {
-            _ = try? self.makeSUT().covert(text:  " #%^&&#13GIS4359^##$*&^do----%!@#^Not show #!%______--@^ error!@%__%^#ALERT 2times in a row^^#$$^^&\n")
+            _ = try? self.makeSUT().convert(text:  " #%^&&#13GIS4359^##$*&^do----%!@#^Not show #!%______--@^ error!@%__%^#ALERT 2times in a row^^#$$^^&\n")
         }
     }
     

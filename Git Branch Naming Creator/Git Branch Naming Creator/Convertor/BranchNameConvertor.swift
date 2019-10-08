@@ -10,7 +10,7 @@ import Foundation
 
 class BranchNameConvertor: BranchNameConvertorType {
     
-    func covert(text: String) throws -> String {
+    func convert(text: String) throws -> String {
         var result = text
         
         // Remove unallowed symbols

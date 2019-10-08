@@ -40,7 +40,7 @@ class MainViewController: NSViewController {
         if !enteringTextField.stringValue.isEmpty {
             
             do {
-                resultTextField.stringValue = try self.branchNameConvertor.covert(text: enteringTextField.stringValue)
+                resultTextField.stringValue = try self.branchNameConvertor.convert(text: enteringTextField.stringValue)
             } catch (let error) {
                 resultTextField.stringValue = error.localizedDescription
             }
