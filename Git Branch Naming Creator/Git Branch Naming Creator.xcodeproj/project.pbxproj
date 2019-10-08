@@ -195,10 +195,12 @@
 				TargetAttributes = {
 					8D1A50512244DBBC00C36C66 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1100;
 						TestTargetID = 8DCDB1D02243E14F009F5F06;
 					};
 					8DCDB1D02243E14F009F5F06 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -301,7 +303,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Halushka.Git-Branch-Naming-Creator-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Git Branch Naming Creator.app/Contents/MacOS/Git Branch Naming Creator";
 			};
 			name = Debug;
@@ -323,7 +325,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Halushka.Git-Branch-Naming-Creator-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Git Branch Naming Creator.app/Contents/MacOS/Git Branch Naming Creator";
 			};
 			name = Release;
@@ -460,7 +462,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Halushka.Git-Branch-Naming-Creator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -481,7 +483,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Halushka.Git-Branch-Naming-Creator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
