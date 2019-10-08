@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14868"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -619,7 +619,7 @@
                                         <menuItem title="Show Sidebar" keyEquivalent="s" id="kIP-vf-haE">
                                             <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                             <connections>
-                                                <action selector="toggleSourceList:" target="Ady-hI-5gd" id="iwa-gc-5KM"/>
+                                                <action selector="toggleSidebar:" target="Ady-hI-5gd" id="iwa-gc-5KM"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Enter Full Screen" keyEquivalent="f" id="4J7-dP-txa">
@@ -713,18 +713,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7K5-3a-qkW">
-                                        <rect key="frame" x="10" y="453" width="480" height="22"/>
+                                        <rect key="frame" x="10" y="454" width="480" height="21"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" placeholderString="Type possible branch name here and press Enter" drawsBackground="YES" id="4ok-df-wAo">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                         <connections>
-                                            <action selector="entringTextFieldEnterActionHandler:" target="GK8-vI-91L" id="56Y-Kl-Ofm"/>
+                                            <action selector="enteringTextFieldEnterActionHandler:" target="GK8-vI-91L" id="56Y-Kl-Ofm"/>
                                         </connections>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qyH-o1-AwD">
-                                        <rect key="frame" x="8" y="411" width="484" height="17"/>
+                                        <rect key="frame" x="8" y="413" width="484" height="16"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Result:" id="o7g-n1-AlL">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="knobColor" catalog="System" colorSpace="catalog"/>
@@ -732,7 +732,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="10" verticalCompressionResistancePriority="100" translatesAutoresizingMaskIntoConstraints="NO" id="3Bx-eJ-esd">
-                                        <rect key="frame" x="8" y="10" width="484" height="391"/>
+                                        <rect key="frame" x="8" y="10" width="484" height="393"/>
                                         <textFieldCell key="cell" lineBreakMode="charWrapping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" alignment="left" id="t2U-tg-FZ2">
                                             <font key="font" metaFont="system" size="20"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -740,7 +740,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cWj-kr-Gfe">
-                                        <rect key="frame" x="219" y="409" width="62" height="22"/>
+                                        <rect key="frame" x="219" y="411" width="62" height="21"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Copied" id="aKC-t7-Jgv">
                                             <font key="font" metaFont="system" size="18"/>
                                             <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
@@ -775,7 +775,7 @@
                     </view>
                     <connections>
                         <outlet property="copiedTextField" destination="cWj-kr-Gfe" id="w9z-dP-SPq"/>
-                        <outlet property="entringTextField" destination="7K5-3a-qkW" id="b4d-p5-kCy"/>
+                        <outlet property="enteringTextField" destination="7K5-3a-qkW" id="b4d-p5-kCy"/>
                         <outlet property="resultTextField" destination="3Bx-eJ-esd" id="rcN-Pb-1et"/>
                         <outlet property="viewHeightConstraint" destination="Wbt-JR-qvc" id="Um2-mb-ukB"/>
                         <outlet property="viewWidthConstraint" destination="6np-UN-Exn" id="IPE-pe-8n5"/>

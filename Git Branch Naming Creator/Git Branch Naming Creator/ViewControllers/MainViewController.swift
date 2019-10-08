@@ -10,7 +10,7 @@ import Cocoa
 
 class MainViewController: NSViewController {
     
-    @IBOutlet weak var entringTextField: NSTextField!
+    @IBOutlet weak var enteringTextField: NSTextField!
     @IBOutlet weak var copiedTextField: NSTextField!
     @IBOutlet weak var resultTextField: NSTextField!
     
@@ -33,7 +33,7 @@ class MainViewController: NSViewController {
     
     private func setupUI() {
         copiedTextField.alphaValue = 0.0
-        self.entringTextField.becomeFirstResponder()
+        self.enteringTextField.becomeFirstResponder()
         
         if let currentScreenSize = Screen.currentScreenResolution() {
             viewWidthConstraint.constant = round(currentScreenSize.width * 0.4)
@@ -41,12 +41,12 @@ class MainViewController: NSViewController {
         }
     }
     
-    @IBAction func entringTextFieldEnterActionHandler(_ sender: Any) {
+    @IBAction func enteringTextFieldEnterActionHandler(_ sender: Any) {
         
-        if !entringTextField.stringValue.isEmpty {
+        if !enteringTextField.stringValue.isEmpty {
             
             do {
-                resultTextField.stringValue = try self.branchNameConvertor.covert(text: entringTextField.stringValue)
+                resultTextField.stringValue = try self.branchNameConvertor.covert(text: enteringTextField.stringValue)
             } catch (let error) {
                 resultTextField.stringValue = error.localizedDescription
             }
