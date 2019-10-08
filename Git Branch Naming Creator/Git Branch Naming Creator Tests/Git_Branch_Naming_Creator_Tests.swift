@@ -11,55 +11,67 @@ import XCTest
 
 class GitBranchNamingCreatorTests: XCTestCase {
 
-    var nameConverotor: BranchNameConvertorType!
+    var nameConvertor: BranchNameConvertorType!
     
     override func setUp() {
-        self.nameConverotor = BranchNameConvertor()
+        self.nameConvertor = BranchNameConvertor()
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testIsConversionCorrect1() {
-        self.testIsConversionCorrect(dataToTest: GitBranchConvertorTestsData.testData1)
+    func testConversionCorrect1() throws {
+        let expected = "ga_2846_improve_matrix_presentation"
+        
+        let converted = try nameConvertor.covert(text: "GA_2846 Improve Matrix presentation  ")
+        
+        XCTAssertEqual(converted, expected)
     }
 
-    func testIsConversionCorrect2() {
-        self.testIsConversionCorrect(dataToTest: GitBranchConvertorTestsData.testData2)
+    func testIsConversionCorrect2() throws {
+        let expected = "ga_2846_improve_matrix_presentation"
+        
+        let converted = try nameConvertor.covert(text:  "  GA 2846 impRove Matrix PResentation")
+        
+        XCTAssertEqual(converted, expected)
     }
     
-    func testIsConversionCorrect3() {
-        self.testIsConversionCorrect(dataToTest: GitBranchConvertorTestsData.testData3)
+    func testConversionCorrect3() throws {
+        let expected = "gis_4359_do_not_show_error_alert_second_time_bug_fix"
+        
+        let converted = try nameConvertor.covert(text: "GIS-4359 Do not show-Error Alert      second Time  Bug Fix")
+        
+        XCTAssertEqual(converted, expected)
     }
     
-    func testIsConversionCorrect4() {
-        self.testIsConversionCorrect(dataToTest: GitBranchConvertorTestsData.testData4)
+    func testConversionCorrect4() throws {
+        let expected = "1_gis_4359_do_not_show_error_alert_2_times_in_a_row_3"
+        
+        let converted = try nameConvertor.covert(text: "1GIS4359do----Not show error_ALERT 2times in a row3 ")
+        
+        XCTAssertEqual(converted, expected)
     }
     
-    func testIsConversionCorrect5() {
-        self.testIsConversionCorrect(dataToTest: GitBranchConvertorTestsData.testData5)
+    func testConversionCorrect5() throws {
+        let expected = "gis_4359_do_not_show_error_alert_2_times_in_a_row"
+        
+        let converted = try nameConvertor.covert(text: " #%^&&# GIS4359^##$*&^do----%!@#^Not show #!%______--@^ error!@%__%^#ALERT 2times in a row^^#$$^^&\n")
+        
+        XCTAssertEqual(converted, expected)
     }
-    
-    func testISConversionCorrect6() {
-        self.testIsConversionCorrect(dataToTest: GitBranchConvertorTestsData.testData6)
+
+    func testConversionCorrect6() throws {
+        let expected = "13_gis_4359_do_not_show_error_alert_2_times_in_a_row"
+        
+        let converted = try nameConvertor.covert(text: " #%^&&#13GIS4359^##$*&^do----%!@#^Not show #!%______--@^ error!@%__%^#ALERT 2times in a row^^#$$^^&\n")
+        
+        XCTAssertEqual(converted, expected)
     }
-    
-    func testIsConversionCorrect(dataToTest: GitBranchConvertorTestsData.TestData) {
-        do {
-            let result = try self.nameConverotor.covert(text: dataToTest.input)
-            
-            XCTAssertEqual(result, dataToTest.correctResult)
-        } catch (let error) {
-            XCTAssertThrowsError(error)
-        }
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
+        
+    func testPerformanceExample() throws {
         self.measure {
-            _ = try? self.nameConverotor.covert(text: GitBranchConvertorTestsData.testData6.input)
-            // Put the code you want to measure the time of here.
+            _ = try? self.nameConvertor.covert(text:  " #%^&&#13GIS4359^##$*&^do----%!@#^Not show #!%______--@^ error!@%__%^#ALERT 2times in a row^^#$$^^&\n")
         }
     }
 

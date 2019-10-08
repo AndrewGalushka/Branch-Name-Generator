@@ -14,7 +14,6 @@
 		8DCDB1DC2243E151009F5F06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DCDB1DA2243E151009F5F06 /* Main.storyboard */; };
 		8DCDB1E92243ECB3009F5F06 /* BranchNameConvertorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDB1E82243ECB3009F5F06 /* BranchNameConvertorType.swift */; };
 		8DCDB1EB2243ED30009F5F06 /* BranchNameConvertor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDB1EA2243ED30009F5F06 /* BranchNameConvertor.swift */; };
-		8DFF32B02244EF4500B607CC /* GitBranchConvertorTestsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFF32AF2244EF4500B607CC /* GitBranchConvertorTestsData.swift */; };
 		8DFF32B3224528ED00B607CC /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFF32B2224528ED00B607CC /* Screen.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +39,6 @@
 		8DCDB1DD2243E151009F5F06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DCDB1E82243ECB3009F5F06 /* BranchNameConvertorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchNameConvertorType.swift; sourceTree = "<group>"; };
 		8DCDB1EA2243ED30009F5F06 /* BranchNameConvertor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchNameConvertor.swift; sourceTree = "<group>"; };
-		8DFF32AF2244EF4500B607CC /* GitBranchConvertorTestsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitBranchConvertorTestsData.swift; sourceTree = "<group>"; };
 		8DFF32B2224528ED00B607CC /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,7 +63,6 @@
 		8D1A50532244DBBD00C36C66 /* Git Branch Naming Creator Tests */ = {
 			isa = PBXGroup;
 			children = (
-				8DFF32AF2244EF4500B607CC /* GitBranchConvertorTestsData.swift */,
 				8D1A50542244DBBD00C36C66 /* Git_Branch_Naming_Creator_Tests.swift */,
 				8D1A50562244DBBD00C36C66 /* Info.plist */,
 			);
@@ -247,7 +244,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DFF32B02244EF4500B607CC /* GitBranchConvertorTestsData.swift in Sources */,
 				8D1A50552244DBBD00C36C66 /* Git_Branch_Naming_Creator_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
