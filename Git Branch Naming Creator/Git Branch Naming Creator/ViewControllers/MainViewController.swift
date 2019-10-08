@@ -24,13 +24,7 @@ class MainViewController: NSViewController {
         
         self.setupUI()
     }
-    
-    override var representedObject: Any? {
-        didSet {
-            // Update the view, if already loaded.
-        }
-    }
-    
+        
     private func setupUI() {
         copiedTextField.alphaValue = 0.0
         self.enteringTextField.becomeFirstResponder()
