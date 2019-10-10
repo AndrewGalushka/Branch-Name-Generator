@@ -19,19 +19,19 @@ class BranchNameConvertor: BranchNameConvertorType {
         // Trim whitespeses and new lines at beginning and end of the text
         result = result.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
 
-        // Replace multy spaces and dash with "_"
-        result = try self.replaceMultySpacesAndDashWithUnderline(in: result)
+        // Replace multi spaces and dash with "_"
+        result = try self.replaceMultiSpacesAndDashWithUnderline(in: result)
         
         // Insert underline between digit and letter
         result = try self.insertUnderlineBetweenDigitAndLetter(in: result)
         
-        // Remove multy underline
-        result = try self.removeMultyUnderline(in: result)
+        // Remove multi underline
+        result = try self.removeMultiUnderline(in: result)
         
         return result.lowercased()
     }
     
-    private func replaceMultySpacesAndDashWithUnderline(in text: String) throws -> String {
+    private func replaceMultiSpacesAndDashWithUnderline(in text: String) throws -> String {
         let regex = try NSRegularExpression(pattern: "\\s+|-")
         let stringWithUnderline = NSMutableString(string: text)
         
@@ -40,7 +40,7 @@ class BranchNameConvertor: BranchNameConvertorType {
         return String(stringWithUnderline)
     }
     
-    private func removeMultyUnderline(in text: String) throws -> String {
+    private func removeMultiUnderline(in text: String) throws -> String {
         let regex = try NSRegularExpression(pattern: "_{2,}")
         let result = regex.stringByReplacingMatches(in: text,
                                                     options: [],
