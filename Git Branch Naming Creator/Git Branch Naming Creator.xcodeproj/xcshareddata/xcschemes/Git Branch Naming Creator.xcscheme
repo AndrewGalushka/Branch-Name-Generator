@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8D1A50512244DBBC00C36C66"
+               BuildableName = "Git Branch Naming Creator Tests.xctest"
+               BlueprintName = "Git Branch Naming Creator Tests"
+               ReferencedContainer = "container:Git Branch Naming Creator.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8D1A50552244DBBD00C36C66 /* Git_Branch_Naming_Creator_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1A50542244DBBD00C36C66 /* Git_Branch_Naming_Creator_Tests.swift */; };
+		8DBE0346234F6B8100A804FF /* PasteboardAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE0345234F6B8100A804FF /* PasteboardAssistant.swift */; };
+		8DBE034A234F886900A804FF /* PasteboardAssistantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE0349234F886900A804FF /* PasteboardAssistantTests.swift */; };
 		8DCDB1D52243E14F009F5F06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDB1D42243E14F009F5F06 /* AppDelegate.swift */; };
 		8DCDB1D72243E14F009F5F06 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDB1D62243E14F009F5F06 /* MainViewController.swift */; };
 		8DCDB1D92243E151009F5F06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DCDB1D82243E151009F5F06 /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 		8D1A50522244DBBC00C36C66 /* Git Branch Naming Creator Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Git Branch Naming Creator Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1A50542244DBBD00C36C66 /* Git_Branch_Naming_Creator_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Git_Branch_Naming_Creator_Tests.swift; sourceTree = "<group>"; };
 		8D1A50562244DBBD00C36C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DBE0345234F6B8100A804FF /* PasteboardAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardAssistant.swift; sourceTree = "<group>"; };
+		8DBE0349234F886900A804FF /* PasteboardAssistantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardAssistantTests.swift; sourceTree = "<group>"; };
 		8DCDB1D12243E14F009F5F06 /* Git Branch Naming Creator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Git Branch Naming Creator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DCDB1D42243E14F009F5F06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DCDB1D62243E14F009F5F06 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1A50542244DBBD00C36C66 /* Git_Branch_Naming_Creator_Tests.swift */,
+				8DBE0349234F886900A804FF /* PasteboardAssistantTests.swift */,
 				8D1A50562244DBBD00C36C66 /* Info.plist */,
 			);
 			path = "Git Branch Naming Creator Tests";
@@ -138,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				8DFF32B2224528ED00B607CC /* Screen.swift */,
+				8DBE0345234F6B8100A804FF /* PasteboardAssistant.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -245,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D1A50552244DBBD00C36C66 /* Git_Branch_Naming_Creator_Tests.swift in Sources */,
+				8DBE034A234F886900A804FF /* PasteboardAssistantTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +262,7 @@
 				8DFF32B3224528ED00B607CC /* Screen.swift in Sources */,
 				8DCDB1D72243E14F009F5F06 /* MainViewController.swift in Sources */,
 				8DCDB1EB2243ED30009F5F06 /* BranchNameConvertor.swift in Sources */,
+				8DBE0346234F6B8100A804FF /* PasteboardAssistant.swift in Sources */,
 				8DCDB1E92243ECB3009F5F06 /* BranchNameConvertorType.swift in Sources */,
 				8DCDB1D52243E14F009F5F06 /* AppDelegate.swift in Sources */,
 			);

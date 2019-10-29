@@ -17,7 +17,8 @@ class MainViewController: NSViewController {
     @IBOutlet weak var viewWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var viewHeightConstraint: NSLayoutConstraint!
     
-    private var branchNameConvertor: BranchNameConvertorType = BranchNameConvertor()
+    private let branchNameConvertor: BranchNameConvertorType = BranchNameConvertor()
+    private let pasteboardAssistant = PasteboardAssistant.general
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,11 +51,8 @@ class MainViewController: NSViewController {
     }
     
     func textCopied() {
-        
-        NSPasteboard.general.clearContents()
-        let success = NSPasteboard.general.writeObjects([resultTextField.stringValue as NSString])
-        
-        if success {
+    
+        if pasteboardAssistant.writeText(resultTextField.stringValue) {
             NSAnimationContext.runAnimationGroup({ (animationContext) in
                 animationContext.duration = 1.25
                 copiedTextField.animator().alphaValue = 1.0
