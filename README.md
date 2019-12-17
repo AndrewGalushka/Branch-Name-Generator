@@ -1,9 +1,9 @@
 # Git Branch Naming Creator
-Is a simple Mac OS application that let you save your time, when you want to create allowed branch name from ticket name(e.g. JIRA ticket).
+Is a simple Mac OS application that let you save your time, when you want to create allowed branch name from ticket name (e.g. JIRA ticket).
 This application has born during my commercial project. 
-Every day I did the same things, copy task name from JIRA and format it (remove upper case, insert underline and remove unallowed symbols like "-" etc).
+Every day I did the same things, copy ticket name from JIRA and format it (remove upper case, insert underline and remove unallowed symbols like "-" etc.).
 Doing it multiple times a day every day was annoying and trivial. 
-The goal of this application speed up creating branch and make life easier.
+The goal of this application is speeding up branch name generation and make life easier.
 
 <p align="center">
     <img src="Demo/Git Branch Naming Creato(demo1).png" width="720" max-width="50%"/>
