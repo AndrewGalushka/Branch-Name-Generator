@@ -1,4 +1,4 @@
-# Git Branch Naming Creator
+# Branch Name Generator
 Is a simple Mac OS application that generates allowed branch name from ticket title (e.g. JIRA ticket).
 This application has born during my commercial project. 
 Every day I did the same things, copy ticket name from JIRA and format it (remove upper case, insert underline and remove unallowed symbols like "-" etc.).
